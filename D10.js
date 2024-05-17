@@ -88,17 +88,25 @@ function deleteOne(stringa, booleano) {
     return stringaDeleteLast;
   }
 }
-console.log(deleteOne(stringa, false));
+/* console.log(deleteOne(stringa, false)); */
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+function onlyLetters(stringa) {
+  const stringaSenzaNumeri = stringa.replace(/\d+/g, "");
+  return stringaSenzaNumeri;
+}
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+function isThisAnEmail(stringa) {
+  const controlloChioc = stringa.includes("@");
+  return controlloChioc;
+}
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
