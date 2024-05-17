@@ -268,6 +268,12 @@ console.log(testoTd());
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+function redBackground() {
+  const tuttiLink = document.getElementsByTagName("link");
+  for (let index = 0; index < tuttiLink.length; index++) {
+    tuttiLink[index].style.backgroundColor = "red";
+  }
+}
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
