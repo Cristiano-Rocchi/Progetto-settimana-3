@@ -205,10 +205,25 @@ function onlyInLastMillennium(movies) {
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+const arrayAnniUscitaStringa = onlyTheYears(movies);
+const arrayAnniUscita = arrayAnniUscitaStringa.map(Number);
+const sommaAnni = arrayAnniUscita.reduce(function (accumulator, current) {
+  return accumulator + current;
+}, 0);
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+function searchByTitle(stringa) {
+  const film = [];
+  for (let index = 0; index < movies.length; index++) {
+    const element = movies[index];
+    if (element.Title === stringa) {
+      film.push(element);
+    }
+  }
+  return film;
+}
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -396,3 +411,9 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ];
+
+/* ESERCIZIO 17
+  Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
+*/
+
+console.log(movies);
