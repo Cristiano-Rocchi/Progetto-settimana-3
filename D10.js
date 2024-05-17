@@ -111,6 +111,11 @@ function isThisAnEmail(stringa) {
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+function whatDayIsIt() {
+  const data = new Date();
+  const giornoSettimana = data.getDay();
+  return giornoSettimana;
+}
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -123,7 +128,20 @@ function isThisAnEmail(stringa) {
       sum: 10
       values: [3, 3, 4]
   }
+  
 */
+function rollTheDices(numero) {
+  const oggetto = {
+    somma: 0,
+    array: [],
+  };
+  for (let index = 0; index < numero; index++) {
+    const dice1 = dice();
+    oggetto.somma = oggetto.somma + dice1;
+    oggetto.array.push(dice1);
+  }
+  return oggetto;
+}
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
@@ -141,6 +159,10 @@ function isThisAnEmail(stringa) {
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+function deleteProp(oggetto, stringa) {
+  delete oggetto[stringa];
+  return oggetto;
+}
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -149,14 +171,36 @@ function isThisAnEmail(stringa) {
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
+function countMovies(movies) {
+  const numeroFilm = movies.length;
+  return numeroFilm;
+}
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+function onlyTheYears(movies) {
+  const anniUscita = [];
+  for (let index = 0; index < movies.length; index++) {
+    const films = movies[index];
+    anniUscita.push(films.Year);
+  }
+  return anniUscita;
+}
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
+function onlyInLastMillennium(movies) {
+  const film = [];
+  for (let index = 0; index < movies.length; index++) {
+    const element = movies[index];
+    if (element.Year < 2000) {
+      film.push(element);
+    }
+  }
+  return film;
+}
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
