@@ -68,7 +68,11 @@ function whoIsBigger(par1, par2) {
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
-*/
+*/ const stringa = "i love coding";
+function splitMe(stringa) {
+  const stringaSplit = stringa.split(" ");
+  return stringaSplit;
+}
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
