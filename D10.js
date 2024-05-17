@@ -278,6 +278,11 @@ function redBackground() {
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+function nuovoLi() {
+  const ul = document.getElementById("myList");
+  const li = document.createElement("li");
+  ul.appendChild(li);
+}
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
