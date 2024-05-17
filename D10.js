@@ -46,10 +46,23 @@ REGOLE
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+function dice() {
+  const casualNumber = Math.round(Math.random() * 6);
+  return casualNumber;
+}
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+function whoIsBigger(par1, par2) {
+  if (par1 > par2) {
+    return par1;
+  } else if (par2 > par1) {
+    return par2;
+  } else {
+    console.log("i numeri sono uguali");
+  }
+}
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
