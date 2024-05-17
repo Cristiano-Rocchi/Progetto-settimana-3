@@ -69,6 +69,7 @@ function whoIsBigger(par1, par2) {
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */ const stringa = "i love coding";
+
 function splitMe(stringa) {
   const stringaSplit = stringa.split(" ");
   return stringaSplit;
@@ -78,6 +79,16 @@ function splitMe(stringa) {
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+function deleteOne(stringa, booleano) {
+  if (booleano === true) {
+    const stringaDeleteFirst = stringa.slice(1);
+    return stringaDeleteFirst;
+  } else {
+    const stringaDeleteLast = stringa.slice(0, -1);
+    return stringaDeleteLast;
+  }
+}
+console.log(deleteOne(stringa, false));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
