@@ -239,10 +239,17 @@ function searchByTitle(stringa) {
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+function SelezioneIdConteiner() {
+  const conteiner = document.getElementById("container");
+  return conteiner;
+}
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+function SelezionaTd() {
+  const tuttiTd = document.getElementsByTagName("td");
+}
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
