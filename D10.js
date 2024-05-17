@@ -290,7 +290,14 @@ function nuovoLi() {
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
+
 */
+function nuovaClasseTr() {
+  const tuttiTr = document.getElementsByTagName("tr");
+  for (let index = 0; index < tuttiTr.length; index++) {
+    tuttiTr[index].classList.add("test");
+  }
+}
 
 // [EXTRA] JS Avanzato
 
